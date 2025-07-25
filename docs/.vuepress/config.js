@@ -1,26 +1,12 @@
-import themeConfig from './themeConfig.js'
+import { defineUserConfig } from 'vuepress'
+import { viteBundler } from '@vuepress/bundler-vite'
+import { plumeTheme } from 'vuepress-theme-plume'
 
-// module.exports = {
-//     title: 'Hello VuePress', //网站的标题
-//     description: 'Just playing around', //网站的描述
-//     themeConfig
-//   }
-
-  module.exports = {
-    theme: '@vuepress/default', 
-    title: '我的博客',
-    description: 'XXX',
-    themeConfig: {
-      nav: [
-        { text: "首页", link: "/" },
-        {
-          text: "codinglin 的博客",
-          items: [
-            { text: "掘金", link: "https://juejin.cn/user/726107228492253" },
-            { text: "Github", link: "https://github.com/coding-lin" }
-          ]
-        }
-      ]
-    }
-  }
-  
+export default defineUserConfig({
+  title: '我的 Plume 博客',
+  description: '使用 plume 主题',
+  bundler: viteBundler(),
+  theme: plumeTheme({
+    // plume 特有配置
+  })
+})
