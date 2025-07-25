@@ -7,6 +7,7 @@ import themeConfig from './themeConfig.js'
 //   }
 
   module.exports = {
+    theme: '@vuepress/default', 
     title: '我的博客',
     description: 'XXX',
     themeConfig: {
