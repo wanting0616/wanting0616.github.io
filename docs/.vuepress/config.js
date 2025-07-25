@@ -1,4 +1,4 @@
-const themeConfig = require('./themeConfig');
+import themeConfig from './themeConfig.js'
 
 module.exports = {
     title: 'Hello VuePress', //网站的标题

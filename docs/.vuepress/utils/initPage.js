@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs'
 // 排除检查的文件
 let excludes = ['.DS_Store'];
 
