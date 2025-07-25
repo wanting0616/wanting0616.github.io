@@ -36,11 +36,4 @@ export default {
         // },
   }
 
-// JavaScript
-// function concatJs() {
-//   const arr = utils.genSidebar( 'JStst', filehelper.getFileName(rootpath + '/JavaScript/'), false);
-//   arr.push(...utils.genSidebar('Js-Vue',filehelper.getFileName(rootpath + '/JavaScript/vue/', 'vue/'),false));
-//   return arr;
-// }
-
 
