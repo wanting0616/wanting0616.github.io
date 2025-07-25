@@ -2,20 +2,20 @@ name: Deploy VuePress to GitHub Pages
 
 on:
   push:
-    branches: [main]  # 注意：如果你的主分支叫 master，就写 master
+    branches:
+      - main  # 或 master，根据你的仓库设置
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout source code
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -27,4 +27,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vuepress/dist
+          publish_dir: ./docs/.vuepress/dist
+          publish_branch: gh-pages
