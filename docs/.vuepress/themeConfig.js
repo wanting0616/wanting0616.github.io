@@ -7,30 +7,30 @@ export default {
         nav: [
           {
             text: 'JavaScript',
-            link: '../JavaScript/',
+            link: '/JavaScript/',
           },
           {
             text: 'Vuejs',
-            link: '../vue/',
+            link: '/vue/',
           },
-        //   {
-        //     text: '其它',
-        //     ariaLabel: 'Menu',
-        //     items: [
-        //       { text: 'VuePress', link: '/other/vuepress/' },
-        //       { text: '开发工具', link: '/other/ide/' }
-        //     ]
-        //   },
-        //   {
-        //     text: '主页',
-        //     ariaLabel: 'Menu',
-        //     items: [
-        //       { text: '主页一', link: '/404/' },
-        //       { text: '主页二', link: '/404/Personal' }
-        //     ]
-        //   },
         ],
-        
+        sidebar: [
+            {
+              title: "欢迎学习",
+              path: "/",
+              collapsable: false,  // 是否折叠
+              children: [{ title: "博客简介", path: "/" }],
+            },
+            {
+              title: "基础篇",
+              path: "/Vue/1",
+              collapsable: true,
+              children: [
+                { title: "第一篇", path: "/Vue/1" },
+                { title: "第二篇", path: "/Vue/2" },
+              ]
+            } 
+          ]
         // sidebar: {
         //   '../JavaScript/': concatJs(),
         // },
